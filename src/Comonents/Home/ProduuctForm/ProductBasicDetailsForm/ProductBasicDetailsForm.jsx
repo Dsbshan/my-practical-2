@@ -1,5 +1,6 @@
 import InputFields from "../../../Common/Form/InputFields.jsx";
 import PropTypes from "prop-types";
+import FormHandlingButton from "../../../Common/Form/FormHandlingButton.jsx";
 
 const ProductBasicDetailsForm = ({ handleNextFormRendering }) => {
   return (
@@ -19,19 +20,13 @@ const ProductBasicDetailsForm = ({ handleNextFormRendering }) => {
         labelName="Product Price"
       />
 
-      <button
-        type="button"
-        onClick={handleNextFormRendering}
-        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-      >
-        Create New Product
-      </button>
+       <FormHandlingButton executingMethod = {handleNextFormRendering} buttonName='Fill warranty Details' />
     </form>
   );
 };
 
 ProductBasicDetailsForm.propTypes = {
-    handleNextFormRendering: PropTypes.func.isRequired
+  handleNextFormRendering: PropTypes.func.isRequired,
 };
 
 export default ProductBasicDetailsForm;
