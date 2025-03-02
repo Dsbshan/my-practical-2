@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 const ProductWarrantyDetailsForm = ({handleBackFormRendering}) => {
   return (
       <form className="max-w-sm mx-auto">
+          <button type='button' onClick={handleBackFormRendering}>Go Back</button>
           <div className="mb-8 font-bold font-large">
               <h1>Product Warranty Details</h1>
           </div>
@@ -22,13 +23,7 @@ const ProductWarrantyDetailsForm = ({handleBackFormRendering}) => {
               name="warranty_end_date"
               labelName="Warranty End Date"
           />
-          <button
-              type="button"
-              onClick={handleBackFormRendering}
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-              back to Basic Details
-          </button>
+
       </form>
   );
 };
