@@ -1,10 +1,11 @@
 import InputFields from "../../../Common/Form/InputFields.jsx";
 import PropTypes from "prop-types";
+import back from '../../../../assets/backbutton1.png'
 // eslint-disable-next-line react/prop-types
 const ProductWarrantyDetailsForm = ({handleBackFormRendering}) => {
   return (
       <form className="max-w-sm mx-auto">
-          <button type='button' onClick={handleBackFormRendering}>Go Back</button>
+          <button type='button' onClick={handleBackFormRendering}><img src={back}/></button>
           <div className="mb-8 font-bold font-large">
               <h1>Product Warranty Details</h1>
           </div>
